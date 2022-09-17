@@ -38,6 +38,19 @@ p {
     margin: 0;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -599,6 +612,81 @@ img {
     margin: 0;
 }
 
+/* footer-subscribe */
+
+.subscribe {
+    margin-left: auto;
+}
+
+.footer-form-title {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 93px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--background-color);
+    margin-bottom: 12px;
+}
+
+.footer-form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-left: 93px;
+}
+
+
+.footer-form-input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: var(--background-accent-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.footer-form-input::placeholder {
+     font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: var(--anim-hover);
+}
+
+.footer-form-lable {
+    display: block;
+}
+
+.footer-form-btn:hover {
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-form-icon {
+    fill: var(--background-color);
+}
+
 /* portfolio */
 
 .portfolio-title-hero {
@@ -762,6 +850,8 @@ img {
 }
 
 .modal {
+    padding-right: 40px;
+    padding-left: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -791,4 +881,183 @@ img {
     background-color: var(--background-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    transition: var(--anim-hover);
+}
+
+.modal-btn:hover {
+    fill: var(--accent-color);
+}
+.modal-btn:focus {
+    fill: var(--accent-color);
+}
+
+.requister-form-title {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.requister-form-group {
+    margin-bottom: 10px;
+}
+
+.requister-form-field {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.requister-form-field:last-child {
+    margin-bottom: 20px;
+}
+
+.requister-form-label {
+    display: block;
+    padding-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color);
+}
+
+.requister-form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    transition: border-color var(--anim-hover);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.requister-form-input:focus {
+    border-color: var(--accent-color);
+}
+
+.requister-form-icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    transition: var(--anim-hover);
+}
+
+.requister-form-input:focus + .requister-form-icon {
+    fill: var(--accent-color);
+}
+
+.requister-form-input:hover + .requister-form-icon {
+    fill: var(--accent-color);
+}
+
+
+.requister-form-message {
+    display: block;
+    resize: none;
+    outline: transparent;
+    width: 448px;
+    height: 120px;
+    font-size: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: var(--anim-hover);
+}
+
+.requister-form-message::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.requister-form-message:focus {
+    border-color: var(--accent-color);
+}
+
+.requister-form-message:hover {
+    border-color: var(--accent-color);
+}
+
+.requister-form-desc {
+    user-select: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+}
+
+.requister-form-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+
+.requister-form-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.requister-form-checkbox:checked + .requister-form-icons .icon-checked {
+    opacity: 1;
+}
+
+.requister-form-checkbox:checked + .requister-form-icons .icon-unchecked {
+    opacity: 0;
+}
+
+.icon-checked {
+    opacity: 0;
+    transition: opacity var(--anim-hover);
+}
+
+.icon-unchecked {
+    opacity: 1;
+    transition: opacity var(--anim-hover);
+}
+
+.requister-form-btn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: var(--anim-hover);
+}
+
+.requister-form-btn:hover {
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.requister-form-btn:focus {
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
